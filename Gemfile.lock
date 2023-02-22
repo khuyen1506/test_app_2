@@ -104,6 +104,7 @@ GEM
     mini_portile2 (2.8.1)
     minitest (5.17.0)
     msgpack (1.6.0)
+    mysql2 (0.5.3)
     net-imap (0.3.4)
       date
       net-protocol
@@ -224,6 +225,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  mysql2
   puma (~> 4.1)
   rails (~> 6.0.6, >= 6.0.6.1)
   sass-rails (>= 6)
