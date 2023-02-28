@@ -6,6 +6,10 @@
     <strong>Description:</strong>
     <%= @article.description %>
   </p>
+    <p>
+    <strong>Author:</strong>
+    <%= @article.user.username if @article.user %>
+  </p>
   <p>
     <%= link_to 'Return to Listing Articles', articles_path %>
     <%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?"} %>

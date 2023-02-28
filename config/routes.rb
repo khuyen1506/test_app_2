@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'student#home'
   get 'about' , to: 'student#about'
   resources :articles
+  get 'signup' , to: 'users#new'
+  resources :users, except: [:new]
 end
