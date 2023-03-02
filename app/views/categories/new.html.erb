@@ -1,0 +1,22 @@
+<h1 class="text-center mt-2">Create Category</h1>
+<div class="container">
+  <%= render'shared/errors', obj: @category %>
+  <div>
+    <%= form_with(model: @category, local: true) do |f| %>
+      <div class="form-group row">
+        <%= f.label :name, "Category Name", class: "col-2 col-form-label"%>
+        <div class="col-8">
+          <%= f.text_field :name, class: "form-control"%>
+        </div>
+      </div>
+      <div class="form-group row"> 
+        <%= f.submit class: "btn btn-primary"%>
+      </div>
+    <% end %> 
+  </div>  
+  <div class="mb-3">
+    <%= link_to '[ Cancel and return to categories listing ]', categories_path, class: "text-info" %>
+  </div>
+</div>
+  
+  

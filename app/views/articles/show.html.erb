@@ -6,7 +6,11 @@
     <strong>Description:</strong>
     <%= @article.description %>
   </p>
-    <p>
+  <p>
+    <strong>Categories:</strong>
+    <%= render @article.categories %>
+  </p>
+  <p>
     <strong>Author:</strong>
     <%= @article.user.username if @article.user %>
   </p>
