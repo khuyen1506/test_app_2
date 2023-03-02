@@ -6,12 +6,18 @@
     <strong>Description:</strong>
     <%= @article.description %>
   </p>
-    <p>
+  <p>
+    <strong>Categories:</strong>
+    <%= render @article.categories %>
+  </p>
+  <p>
     <strong>Author:</strong>
     <%= @article.user.username if @article.user %>
   </p>
   <p>
     <%= link_to 'Return to Listing Articles', articles_path %>
-    <%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?"} %>
+    <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
+      <%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?"} %>
+    <% end %>
   </p>
 </div>
